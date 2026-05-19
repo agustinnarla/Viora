@@ -15,24 +15,26 @@ import {
 import { router } from "expo-router";
 import Animated, { FadeIn } from "react-native-reanimated";
 
-export const LoginPage = () => {
-  const handleLogin = () => {
-    router.replace("/(tabs)");
-  };
-
+export const RegisterPage = () => {
   const handleRegister = () => {
-    router.replace("/(auth)/register");
+    router.replace("/(tabs)");
   };
 
   return (
     <Animated.View entering={FadeIn.duration(2000)} style={{ flex: 1 }}>
       <LinearGradientComponent />
       <View style={styles.form}>
-        <Text style={styles.title}>Login</Text>
+        <Text style={styles.title}>Registrar</Text>
         <View style={styles.containerForm}>
           <Text style={styles.label}>Email</Text>
           <TextInput style={styles.input} placeholder="ejemplo@gmail.com" />
           <Text style={styles.label}>Contraseña</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="***********"
+            secureTextEntry
+          />
+          <Text style={styles.label}>Confirmar Contraseña</Text>
           <TextInput
             style={styles.input}
             placeholder="***********"
@@ -43,24 +45,12 @@ export const LoginPage = () => {
             <TouchableOpacity>
               <AntDesign name="google" size={24} color="black" />
             </TouchableOpacity>
-            <Text style={styles.googleText}>Ingresar con Google</Text>
+            <Text style={styles.googleText}>Registrar con Google</Text>
           </View>
         </View>
 
         <View style={styles.buttonContainer}>
-          <ButtonComponent title="Iniciar sesión" onPress={() => {}} />
-        </View>
-        <View style={styles.registrar}>
-          <Text style={{ fontFamily: "Inter", color: "grey" }}>
-            En caso de no tener cuenta se puede
-          </Text>
-          <TouchableOpacity
-            style={styles.registrarButton}
-            activeOpacity={0.7}
-            onPress={handleRegister}
-          >
-            <Text style={styles.registrarText}>Registrar</Text>
-          </TouchableOpacity>
+          <ButtonComponent title="Registrar sesión" onPress={() => {}} />
         </View>
       </View>
     </Animated.View>
