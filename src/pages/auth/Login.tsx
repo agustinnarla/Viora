@@ -48,7 +48,7 @@ export const LoginPage = () => {
         </View>
 
         <View style={styles.buttonContainer}>
-          <ButtonComponent title="Iniciar sesión" onPress={() => {}} />
+          <ButtonComponent title="Iniciar sesión" onPress={handleLogin} />
         </View>
         <View style={styles.registrar}>
           <Text style={{ fontFamily: "Inter", color: "grey" }}>

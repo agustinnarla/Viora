@@ -9,5 +9,11 @@ export default function RootLayout() {
   });
   if (!loaded) return null;
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="/(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="/(tabs)" options={{ headerShown: false }} />
+    </Stack>
+  );
 }
